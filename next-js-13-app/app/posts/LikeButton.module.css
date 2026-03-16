@@ -1,0 +1,23 @@
+.button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  border-radius: 6px;
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  padding: 6px;
+  color: #cfcfcf;
+}
+
+.button svg {
+  width: 20px;
+  height: 20px;
+}
+
+.liked {
+  background: rgba(31, 123, 212, 0.12);
+  border-color: #1f7bd4;
+  color: #1f7bd4;
+}

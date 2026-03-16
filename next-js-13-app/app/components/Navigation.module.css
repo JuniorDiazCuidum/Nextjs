@@ -1,36 +1,39 @@
 .header {
-  padding: 1rem 2rem;
   display: flex;
-  align-items: center;
+  justify-content: center;
+  padding: 18px 0;
   background: transparent;
+}
+
+.header nav {
+  width: calc(100% - 80px);
+  max-width: 980px;
+  margin: 0 auto;
+  border: 1px solid rgba(255, 255, 255, 0.22);
+  border-radius: 8px;
+  padding: 14px 32px;
+  box-sizing: border-box;
+  background: rgba(0,0,0,0.0);
 }
 
 .Navigation {
   list-style: none;
   display: flex;
-  gap: 1rem;
+  gap: 40px;
   margin: 0;
   padding: 0;
+  justify-content: flex-start;
+  align-items: center;
+  font-weight: 600;
+  font-size: 18px;
 }
 
 .Navigation li a {
-  color: inherit;
+  color: white;
   text-decoration: none;
   padding: 0.25rem 0.5rem;
 }
-.header{
-    border: 1px solid #f0f0f0;
-    border-radius: 4px;
-    padding: 4px;
-}
 
-.Navigation {
-    display: flex;
-    list-style: none;
-    gap: 32px;
-}
-
-.Navigation a:hover{
-    color: #f0f0f0;
-    text-decoration: underline;
+.Navigation a:hover {
+  opacity: 0.95;
 }
