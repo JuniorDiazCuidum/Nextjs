@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+  <!-- Cuerpo (triángulo) -->
+  <polygon points="50,15 88,80 12,80" fill="#FFCC00"/>
+  <!-- Vientre -->
+  <polygon points="50,42 72,78 28,78" fill="#E8A800"/>
+  <!-- Pluma cima -->
+  <polygon points="50,10 46,20 50,16 54,20" fill="#CC9900"/>
+  <polygon points="52,8 49,19 52,15 56,18" fill="#CC9900"/>
+  <!-- Cejas enojadas -->
+  <rect x="30" y="40" width="14" height="4" rx="2" fill="#7A5000" transform="rotate(-18,37,42)"/>
+  <rect x="56" y="40" width="14" height="4" rx="2" fill="#7A5000" transform="rotate(18,63,42)"/>
+  <!-- Ojos -->
+  <ellipse cx="38" cy="48" rx="8" ry="9" fill="#fff"/>
+  <ellipse cx="62" cy="48" rx="8" ry="9" fill="#fff"/>
+  <circle cx="40" cy="50" r="4" fill="#1a1a1a"/>
+  <circle cx="64" cy="50" r="4" fill="#1a1a1a"/>
+  <circle cx="42" cy="48" r="1.5" fill="#fff"/>
+  <circle cx="66" cy="48" r="1.5" fill="#fff"/>
+  <!-- Pico -->
+  <polygon points="44,56 56,56 50,64" fill="#F5A623"/>
+  <polygon points="44,56 56,56 50,60" fill="#E8901A"/>
+</svg>

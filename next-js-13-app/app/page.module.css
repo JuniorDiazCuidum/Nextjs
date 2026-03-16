@@ -1,0 +1,39 @@
+.container {
+  display: grid;
+  grid-template-columns: 1fr 300px;
+  gap: 24px;
+  align-items: start;
+  max-width: 980px;
+  margin: 0 auto;
+  padding: 28px 20px;
+}
+
+.feed h2 {
+  font-family: 'Bangers', sans-serif;
+  font-size: 28px;
+  letter-spacing: 2px;
+  color: var(--ab-red);
+  margin: 0 0 16px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.feed h2::after {
+  content: '🐦';
+  font-size: 22px;
+}
+
+.sidebar {
+  position: sticky;
+  top: 80px;
+}
+
+@media (max-width: 680px) {
+  .container {
+    grid-template-columns: 1fr;
+  }
+  .sidebar {
+    position: static;
+  }
+}

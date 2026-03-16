@@ -1,0 +1,85 @@
+.post {
+  background: var(--card-bg);
+  border-radius: 16px;
+  margin-bottom: 16px;
+  padding: 16px;
+  box-shadow: var(--shadow);
+  border: 2px solid rgba(0,0,0,0.05);
+  border-left: 6px solid var(--ab-red);
+  transition: box-shadow 0.2s;
+}
+
+.post:hover {
+  box-shadow: var(--shadow-hover);
+}
+
+.header {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.avatar {
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid var(--ab-yellow);
+  background: var(--ab-sky);
+  flex-shrink: 0;
+}
+
+.name {
+  font-weight: 800;
+  font-size: 15px;
+  color: var(--text);
+}
+
+.meta {
+  font-size: 12px;
+  color: var(--muted);
+  margin-top: 2px;
+}
+
+.content {
+  margin: 10px 0 12px;
+  font-size: 15px;
+  line-height: 1.55;
+  color: var(--text);
+  white-space: pre-wrap;
+}
+
+.actions {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+.likeButton {
+  background: #FFF0EE;
+  border: 2px solid #FFB8B3;
+  cursor: pointer;
+  padding: 6px 14px;
+  border-radius: 20px;
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--ab-red);
+  transition: background 0.15s;
+}
+
+.likeButton:hover,
+.likeButton[aria-pressed='true'] {
+  background: #FFD5D2;
+  border-color: var(--ab-red);
+}
+
+.comments {
+  color: var(--muted);
+  font-size: 14px;
+  font-weight: 600;
+  padding: 6px 14px;
+  background: #F0F8FF;
+  border-radius: 20px;
+  border: 2px solid #C5E0F5;
+}

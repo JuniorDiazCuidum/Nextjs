@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+  <!-- Tres pájaros azules apilados -->
+  <!-- Fondo / tercero -->
+  <circle cx="58" cy="68" r="16" fill="#5B9BD5"/>
+  <!-- Ojos tercero -->
+  <ellipse cx="54" cy="64" rx="4" ry="5" fill="#fff"/>
+  <circle cx="55" cy="65" r="2" fill="#1a1a1a"/>
+  <!-- Segundo -->
+  <circle cx="42" cy="65" r="16" fill="#4A8CC4"/>
+  <ellipse cx="46" cy="61" rx="4" ry="5" fill="#fff"/>
+  <circle cx="45" cy="62" r="2" fill="#1a1a1a"/>
+  <!-- Primero (frente) -->
+  <circle cx="50" cy="50" r="18" fill="#3A7AB5"/>
+  <!-- Pluma cima -->
+  <polygon points="50,30 47,40 50,37 53,40" fill="#2A6AA5"/>
+  <!-- Cejas -->
+  <rect x="36" y="40" width="10" height="3" rx="1.5" fill="#1a4070" transform="rotate(-15,41,42)"/>
+  <rect x="54" y="40" width="10" height="3" rx="1.5" fill="#1a4070" transform="rotate(15,59,42)"/>
+  <!-- Ojos principales -->
+  <ellipse cx="43" cy="46" rx="6" ry="7" fill="#fff"/>
+  <ellipse cx="57" cy="46" rx="6" ry="7" fill="#fff"/>
+  <circle cx="45" cy="48" r="3" fill="#1a1a1a"/>
+  <circle cx="59" cy="48" r="3" fill="#1a1a1a"/>
+  <circle cx="46" cy="46" r="1" fill="#fff"/>
+  <circle cx="60" cy="46" r="1" fill="#fff"/>
+  <!-- Pico -->
+  <polygon points="44,53 56,53 50,60" fill="#F5A623"/>
+  <polygon points="44,53 56,53 50,56" fill="#E8901A"/>
+</svg>

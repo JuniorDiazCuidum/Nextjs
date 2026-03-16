@@ -1,0 +1,144 @@
+.page {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 32px 20px 60px;
+}
+
+/* ─── HERO SECCIÓN ─── */
+.hero {
+  display: flex;
+  gap: 28px;
+  align-items: center;
+  background: #fff;
+  border-radius: 20px;
+  padding: 28px 24px;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.10);
+  border-top: 6px solid var(--ab-red);
+  margin-bottom: 36px;
+}
+
+.heroAvatar {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 5px solid var(--ab-yellow);
+  background: var(--ab-sky);
+  flex-shrink: 0;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.12);
+}
+
+.heroName {
+  font-family: 'Bangers', sans-serif;
+  font-size: 36px;
+  letter-spacing: 2px;
+  color: var(--ab-red);
+  margin: 0 0 8px;
+}
+
+.heroBio {
+  font-size: 15px;
+  line-height: 1.6;
+  color: var(--text-light);
+  margin: 0 0 16px;
+  max-width: 520px;
+}
+
+.heroStats {
+  display: flex;
+  gap: 24px;
+}
+
+.stat {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.stat strong {
+  font-family: 'Bangers', sans-serif;
+  font-size: 24px;
+  color: var(--ab-red);
+  letter-spacing: 1px;
+}
+
+.stat span {
+  font-size: 12px;
+  color: var(--muted);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+/* ─── SECCIÓN TÍTULO ─── */
+.sectionTitle {
+  font-family: 'Bangers', sans-serif;
+  font-size: 30px;
+  letter-spacing: 2px;
+  color: var(--ab-red);
+  margin: 0 0 20px;
+}
+
+/* ─── GRILLA DE PÁJAROS ─── */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+  gap: 16px;
+}
+
+.birdCard {
+  background: #fff;
+  border-radius: 16px;
+  padding: 20px 14px 16px;
+  text-align: center;
+  box-shadow: 0 4px 14px rgba(0,0,0,0.08);
+  border-bottom: 4px solid var(--ab-yellow);
+  transition: transform 0.15s, box-shadow 0.15s;
+}
+
+.birdCard:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 24px rgba(0,0,0,0.13);
+}
+
+.birdAvatar {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  border: 3px solid var(--ab-yellow);
+  background: var(--ab-sky);
+  margin-bottom: 10px;
+}
+
+.birdName {
+  font-family: 'Bangers', sans-serif;
+  font-size: 20px;
+  letter-spacing: 1px;
+  color: var(--ab-red);
+  margin-bottom: 2px;
+}
+
+.birdRole {
+  font-size: 12px;
+  font-weight: 700;
+  color: var(--ab-sky-dark);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  margin-bottom: 8px;
+}
+
+.birdDesc {
+  font-size: 13px;
+  color: var(--text-light);
+  line-height: 1.5;
+  margin: 0;
+}
+
+@media (max-width: 600px) {
+  .hero {
+    flex-direction: column;
+    text-align: center;
+  }
+  .heroStats {
+    justify-content: center;
+  }
+}

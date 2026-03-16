@@ -1,9 +1,39 @@
-html,
-body {
+@import url('https://fonts.googleapis.com/css2?family=Bangers&family=Nunito:wght@400;600;700;800&display=swap');
+
+:root {
+	/* Paleta Angry Birds - clara y legible */
+	--ab-red: #E8302A;
+	--ab-red-light: #FF6B60;
+	--ab-yellow: #FFD000;
+	--ab-yellow-light: #FFE566;
+	--ab-sky: #87CEEB;
+	--ab-sky-dark: #4FA8D5;
+	--ab-green: #5BB33A;
+	--ab-brown: #8B5E3C;
+
+	/* Fondo de cielo Angry Birds */
+	--bg: #E8F4FD;
+	--bg-gradient: linear-gradient(180deg, #B8E4F7 0%, #D6EFF9 30%, #EEF8FE 70%, #F5FBE8 100%);
+
+	/* Tarjetas y texto */
+	--card-bg: #FFFFFF;
+	--card-border: rgba(0,0,0,0.09);
+	--text: #1E1E1E;
+	--text-light: #555;
+	--muted: #777;
+
+	/* Sombras y bordes */
+	--shadow: 0 4px 16px rgba(0,0,0,0.10);
+	--shadow-hover: 0 8px 24px rgba(0,0,0,0.15);
+}
+
+html, body {
 	padding: 0;
 	margin: 0;
-	font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-		Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+	font-family: 'Nunito', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+	color: var(--text);
+	background: var(--bg-gradient);
+	min-height: 100vh;
 }
 
 a {
@@ -15,19 +45,17 @@ a {
 	box-sizing: border-box;
 }
 
-body{
-    padding: 100px;
-    max-width: 800px;
-    margin: 0 auto;
+body {
+	padding: 0 0 60px;
+	max-width: 100%;
+	margin: 0 auto;
 }
 
-@media (prefers-color-scheme: dark) {
-	html {
-		color-scheme: dark;
-	}
-	body {
-		color: white;
-		background: black;
-	}
+h1, h2, h3, h4 {
+	font-family: 'Bangers', sans-serif;
+	letter-spacing: 1.5px;
+	color: var(--text);
 }
+
+/* Sin overrides de dark-mode para mantener siempre el fondo claro de Angry Birds */
 

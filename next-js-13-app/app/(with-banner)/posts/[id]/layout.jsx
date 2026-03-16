@@ -1,9 +1,10 @@
-import Link from "next/link"
-
-export default function CommentsLayout({ children }) {
-    return (
-        <>
-            <div>{children}</div>
-        </>
+import { Counter } from './Counter.jsx'
+ 
+export default function PostsLayout ({ children }) {
+    return(
+        <div>
+            <Counter />
+            {children}
+        </div>
     )
 }
