@@ -1,12 +1,14 @@
 'use client'
 
 import { useState, useEffect } from 'react'
+import { useRouter } from 'next/navigation'
 import styles from './comments/comments.module.css'
 
 export default function ShowComments({ postId }) {
   const [open, setOpen] = useState(false)
   const [loading, setLoading] = useState(false)
   const [comments, setComments] = useState([])
+  const router = useRouter()
 
   useEffect(() => {
     if (!open) return
@@ -21,8 +23,8 @@ export default function ShowComments({ postId }) {
 
   return (
     <div>
-      <button className={styles.showButton} onClick={() => setOpen(v => !v)}>
-        {open ? 'Ocultar comentarios' : 'Ver comentarios'}
+      <button className={styles.showButton} onClick={() => router.push(`/posts/${postId}/comments`)}>
+        Ver comentarios
       </button>
 
       {open && (
