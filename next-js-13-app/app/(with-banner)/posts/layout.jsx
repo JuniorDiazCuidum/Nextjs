@@ -1,4 +1,6 @@
 export default function Layout({ children }) {
+    const text = '🐷 ¡CUIDADO! LOS CERDOS VERDES RONDAN POR AHÍ 🐷 \u00a0\u00a0\u00a0 🐦 LANZA A TUS PÁJAROS Y RECUPERA LOS HUEVOS 🥚 \u00a0\u00a0\u00a0 🐷 ¡CUIDADO! LOS CERDOS VERDES RONDAN POR AHÍ 🐷 \u00a0\u00a0\u00a0 🐦 LANZA A TUS PÁJAROS Y RECUPERA LOS HUEVOS 🥚 \u00a0\u00a0\u00a0'
+
     return (
         <div>
             <div style={{
@@ -8,13 +10,21 @@ export default function Layout({ children }) {
                 fontSize: '17px',
                 letterSpacing: '2px',
                 padding: '8px 0',
-                textAlign: 'center',
                 overflow: 'hidden',
                 whiteSpace: 'nowrap',
             }}>
-                🐷 ¡CUIDADO! LOS CERDOS VERDES RONDAN POR AHÍ 🐷 &nbsp;&nbsp;&nbsp;
-                🐦 LANZA A TUS PÁJAROS Y RECUPERA LOS HUEVOS 🥚 &nbsp;&nbsp;&nbsp;
-                🐷 ¡CUIDADO! LOS CERDOS VERDES RONDAN POR AHÍ 🐷
+                <span style={{
+                    display: 'inline-block',
+                    animation: 'bannerScroll 18s linear infinite',
+                }}>
+                    {text}{text}
+                </span>
+                <style>{`
+                    @keyframes bannerScroll {
+                        0%   { transform: translateX(0); }
+                        100% { transform: translateX(-50%); }
+                    }
+                `}</style>
             </div>
             { children }
         </div>

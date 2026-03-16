@@ -23,3 +23,12 @@
   border-color: var(--ab-red);
   color: #fff;
 }
+
+.count {
+  font-family: 'Bangers', cursive;
+  font-size: 18px;
+  letter-spacing: 1px;
+  color: inherit;
+  min-width: 16px;
+  text-align: center;
+}

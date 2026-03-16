@@ -3,12 +3,14 @@
 import { useState } from "react"
 import styles from './LikeButton.module.css'
 
-export function LikeButton({ id, className, onToggle, initialLiked = false }) {
+export function LikeButton({ id, className, onToggle, initialLiked = false, initialCount = 0 }) {
     const [liked, setLiked] = useState(initialLiked)
+    const [count, setCount] = useState(initialCount)
 
     const handleClick = () => {
         const newLiked = !liked
         setLiked(newLiked)
+        setCount(prev => prev + (newLiked ? 1 : -1))
         if (typeof onToggle === 'function') onToggle(newLiked)
     }
 
@@ -20,6 +22,7 @@ export function LikeButton({ id, className, onToggle, initialLiked = false }) {
             aria-label={`like-${id}`}
         >
             <span className={styles.emoji} aria-hidden="true">{liked ? '💙' : '🖤'}</span>
+            <span className={styles.count}>{count}</span>
         </button>
     )
 }

@@ -2,10 +2,9 @@
   background: var(--card-bg);
   border-radius: 16px;
   margin-bottom: 16px;
-  padding: 16px;
+  overflow: hidden;
   box-shadow: var(--shadow);
   border: 2px solid rgba(0,0,0,0.05);
-  border-left: 6px solid var(--ab-red);
   transition: box-shadow 0.2s;
 }
 
@@ -17,12 +16,12 @@
   display: flex;
   gap: 12px;
   align-items: center;
-  margin-bottom: 10px;
+  padding: 14px 16px 0;
 }
 
 .avatar {
-  width: 56px;
-  height: 56px;
+  width: 52px;
+  height: 52px;
   border-radius: 50%;
   object-fit: cover;
   border: 3px solid var(--ab-yellow);
@@ -34,6 +33,17 @@
   font-weight: 800;
   font-size: 15px;
   color: var(--text);
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  flex-wrap: wrap;
+}
+
+.role {
+  font-weight: 400;
+  font-size: 12px;
+  color: var(--muted);
+  margin-left: 4px;
 }
 
 .meta {
@@ -43,43 +53,240 @@
 }
 
 .content {
-  margin: 10px 0 12px;
+  padding: 10px 16px 14px;
   font-size: 15px;
-  line-height: 1.55;
+  line-height: 1.6;
   color: var(--text);
-  white-space: pre-wrap;
 }
 
-.actions {
+/* ─── BARRA DE ACCIONES ─── */
+.footer {
+  display: flex;
+  gap: 8px;
+  padding: 0 12px 12px;
+  border-top: 1px solid rgba(0,0,0,0.06);
+  padding-top: 10px;
+}
+
+.actionBtn {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  background: #F5F7FA;
+  border: 2px solid rgba(0,0,0,0.07);
+  border-radius: 24px;
+  padding: 7px 16px;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--text-light);
+  transition: background 0.15s, border-color 0.15s, color 0.15s;
+  font-family: inherit;
+}
+
+.actionBtn:hover {
+  background: #ECEEF2;
+  border-color: rgba(0,0,0,0.12);
+}
+
+.btnIcon {
+  font-size: 18px;
+  line-height: 1;
+}
+
+.btnCount {
+  font-size: 15px;
+  font-weight: 800;
+  color: var(--text);
+}
+
+.btnLabel {
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--muted);
+}
+
+.liked {
+  background: #FFF0EE;
+  border-color: var(--ab-red);
+  color: var(--ab-red);
+}
+
+.liked .btnCount {
+  color: var(--ab-red);
+}
+
+.commentActive {
+  background: #EEF5FF;
+  border-color: var(--ab-sky-dark);
+  color: var(--ab-sky-dark);
+}
+
+.commentActive .btnCount {
+  color: var(--ab-sky-dark);
+}
+
+/* ─── COMENTARIOS INLINE ─── */
+.commentsSection {
+  padding: 0 12px 14px;
+}
+
+.commentsDivider {
+  height: 1px;
+  background: rgba(0,0,0,0.07);
+  margin-bottom: 12px;
+}
+
+.loadingMsg {
+  color: var(--muted);
+  font-size: 14px;
+  padding: 4px 0;
+  margin: 0;
+}
+
+.commentsList {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.commentItem {
+  display: flex;
+  gap: 10px;
+  align-items: flex-start;
+}
+
+.commentAvatar {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  object-fit: cover;
+  flex-shrink: 0;
+  border: 2px solid var(--ab-yellow);
+  background: var(--ab-sky);
+}
+
+.commentContent {
+  background: #F5F7FA;
+  border-radius: 10px;
+  padding: 8px 12px;
+  flex: 1;
+}
+
+.commentName {
+  font-weight: 700;
+  font-size: 13px;
+  color: var(--text);
+  margin-bottom: 3px;
+}
+
+.commentBody {
+  font-size: 13px;
+  color: var(--text-light);
+  line-height: 1.5;
+}
+
+/* ─── FORMULARIO NUEVO COMENTARIO ─── */
+.commentForm {
   display: flex;
   gap: 10px;
   align-items: center;
+  margin-bottom: 14px;
 }
 
-.likeButton {
-  background: #FFF0EE;
-  border: 2px solid #FFB8B3;
-  cursor: pointer;
-  padding: 6px 14px;
-  border-radius: 20px;
+.commentInputWrapper {
+  display: flex;
+  flex: 1;
+  gap: 8px;
+  align-items: center;
+  background: #F5F7FA;
+  border: 2px solid rgba(0,0,0,0.08);
+  border-radius: 24px;
+  padding: 4px 6px 4px 14px;
+  transition: border-color 0.15s;
+}
+
+.commentInputWrapper:focus-within {
+  border-color: var(--ab-sky-dark);
+}
+
+.commentInput {
+  flex: 1;
+  border: none;
+  background: transparent;
   font-size: 14px;
-  font-weight: 700;
-  color: var(--ab-red);
-  transition: background 0.15s;
+  font-family: inherit;
+  color: var(--text);
+  outline: none;
+  padding: 4px 0;
 }
 
-.likeButton:hover,
-.likeButton[aria-pressed='true'] {
-  background: #FFD5D2;
-  border-color: var(--ab-red);
-}
-
-.comments {
+.commentInput::placeholder {
   color: var(--muted);
-  font-size: 14px;
-  font-weight: 600;
-  padding: 6px 14px;
-  background: #F0F8FF;
+}
+
+.commentSubmit {
+  background: var(--ab-red);
+  color: #fff;
+  border: none;
   border-radius: 20px;
-  border: 2px solid #C5E0F5;
+  padding: 6px 14px;
+  font-size: 13px;
+  font-weight: 700;
+  font-family: 'Bangers', cursive;
+  letter-spacing: 1px;
+  cursor: pointer;
+  transition: background 0.15s;
+  white-space: nowrap;
+}
+
+.commentSubmit:hover:not(:disabled) {
+  background: var(--ab-red-light);
+}
+
+.commentSubmit:disabled {
+  opacity: 0.4;
+  cursor: default;
+}
+
+/* ─── REACCIONES EMOJI ─── */
+.emojiBar {
+  display: flex;
+  gap: 4px;
+  margin-top: 8px;
+  flex-wrap: wrap;
+}
+
+.emojiBtn {
+  display: inline-flex;
+  align-items: center;
+  gap: 3px;
+  background: #F0F2F5;
+  border: 1.5px solid transparent;
+  border-radius: 20px;
+  padding: 3px 8px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background 0.12s, border-color 0.12s, transform 0.1s;
+  line-height: 1;
+}
+
+.emojiBtn:hover {
+  background: #E4E6EA;
+  transform: scale(1.15);
+}
+
+.emojiActive {
+  background: #FFF3CD;
+  border-color: var(--ab-yellow);
+}
+
+.emojiCount {
+  font-size: 12px;
+  font-weight: 700;
+  color: var(--text);
+  font-family: 'Nunito', sans-serif;
 }

@@ -1,18 +1,18 @@
 import styles from './about.module.css'
 
 const birds = [
-  { name: 'Red', role: 'El Líder', avatar: '/bird-red.svg', desc: 'Gruñón pero leal. Siempre el primero en defender el nido.' },
-  { name: 'Chuck', role: 'El Veloz', avatar: '/bird-yellow.svg', desc: 'El más rápido de la bandada. Siempre en movimiento.' },
-  { name: 'Bomb', role: 'La Bomba', avatar: '/bird-black.svg', desc: 'Explosivo cuando se enoja. Pero en el fondo es noble.' },
-  { name: 'Matilda', role: 'La Pacífica', avatar: '/bird-white.svg', desc: 'Prefiere la paz, pero no le temas si la provocas.' },
-  { name: 'Los Blues', role: 'El Trío', avatar: '/bird-blue.svg', desc: 'Jim, Jake y Jay: tres en uno, imparables juntos.' },
+  { name: 'Red', role: 'El Líder', avatar: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRXROZRdgt62i9mMtqXD2GEFYZWIsLgdD-aF6yzTzBiyA&s', desc: 'Gruñón pero leal. Siempre el primero en defender el nido.' },
+  { name: 'Chuck', role: 'El Veloz', avatar: 'https://static.wikia.nocookie.net/heroe/images/5/55/Chuck_clasico_1_AB.png/revision/latest?cb=20210723031917&path-prefix=es', desc: 'El más rápido de la bandada. Siempre en movimiento.' },
+  { name: 'Bomb', role: 'La Bomba', avatar: 'https://static.wikia.nocookie.net/angrybirds/images/3/36/9V8YAkqV.png/revision/latest/scale-to-width-down/250?cb=20220430150804', desc: 'Explosivo cuando se enoja. Pero en el fondo es noble.' },
+  { name: 'Matilda', role: 'La Pacífica', avatar: 'https://preview.redd.it/i-cant-be-the-only-one-who-thought-this-bird-was-a-boy-v0-grhktjdirqg91.jpg?width=640&crop=smart&auto=webp&s=5a294208f6918535ba6d951cbce2c4ef7fc35d0c', desc: 'Prefiere la paz, pero no le temas si la provocas.' },
+  { name: 'Los Blues', role: 'El Trío', avatar: 'https://static.wikia.nocookie.net/angrybirdsfanon/images/4/46/BluesToons.png/revision/latest?cb=20201019183123&path-prefix=es', desc: 'Jim, Jake y Jay: tres en uno, imparables juntos.' },
 ]
 
 export default function AboutPage() {
   return (
     <main className={styles.page}>
       <section className={styles.hero}>
-        <img src="/bird-red.svg" alt="Red" className={styles.heroAvatar} />
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRXROZRdgt62i9mMtqXD2GEFYZWIsLgdD-aF6yzTzBiyA&s" alt="Red" className={styles.heroAvatar} />
         <div>
           <h1 className={styles.heroName}>Red — El Líder</h1>
           <p className={styles.heroBio}>
