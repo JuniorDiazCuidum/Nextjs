@@ -1,4 +1,9 @@
-export default function Post ({ params }) {
-    const { id } = params
-    return <h1>Esto es el post {id}</h1>
+import { ListOfPosts } from "./ListOfPosts";
+
+export default async function PostsPage({ params }) {
+    return (
+        <section>
+            <ListOfPosts />
+        </section>
+    )
 }
