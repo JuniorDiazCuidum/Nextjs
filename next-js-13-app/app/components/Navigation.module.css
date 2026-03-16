@@ -24,7 +24,13 @@
     padding: 4px;
 }
 
-.navigaion {
+.Navigation {
     display: flex;
     list-style: none;
+    gap: 32px;
+}
+
+.Navigation a:hover{
+    color: #f0f0f0;
+    text-decoration: underline;
 }
