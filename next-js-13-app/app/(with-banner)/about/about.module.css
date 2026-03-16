@@ -4,7 +4,15 @@
   padding: 32px 20px 60px;
 }
 
-/* ─── HERO SECCIÓN ─── */
+.pageTitle {
+  font-family: 'Bangers', cursive;
+  font-size: 52px;
+  color: var(--ab-red);
+  letter-spacing: 2px;
+  margin: 0 0 32px;
+}
+
+/* ─── HERO SECCIÓN (unused) ─── */
 .hero {
   display: flex;
   gap: 28px;
@@ -93,11 +101,19 @@
   box-shadow: 0 4px 14px rgba(0,0,0,0.08);
   border-bottom: 4px solid var(--ab-yellow);
   transition: transform 0.15s, box-shadow 0.15s;
+  text-decoration: none;
+  color: inherit;
+  display: block;
+  cursor: pointer;
 }
 
 .birdCard:hover {
   transform: translateY(-4px);
   box-shadow: 0 8px 24px rgba(0,0,0,0.13);
+}
+
+.pigCard {
+  border-bottom-color: #5AA832;
 }
 
 .birdAvatar {
@@ -130,7 +146,74 @@
   font-size: 13px;
   color: var(--text-light);
   line-height: 1.5;
-  margin: 0;
+  margin: 0 0 10px;
+}
+
+.viewProfile {
+  display: inline-block;
+  font-size: 12px;
+  font-weight: 700;
+  color: var(--ab-red);
+  background: rgba(232,48,42,0.08);
+  border-radius: 10px;
+  padding: 3px 10px;
+  letter-spacing: 0.3px;
+  transition: background 0.12s;
+}
+
+.birdCard:hover .viewProfile {
+  background: rgba(232,48,42,0.18);
+}
+
+/* ─── INFO DEL JUEGO ─── */
+.gameInfo {
+  background: #fff;
+  border-radius: 20px;
+  padding: 24px;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.08);
+  margin-bottom: 36px;
+  border-left: 6px solid var(--ab-red);
+}
+
+.gameDesc {
+  font-size: 15px;
+  line-height: 1.7;
+  color: var(--text-light);
+  margin: 0 0 20px;
+}
+
+.gameStatsGrid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 12px;
+}
+
+.gameStat {
+  background: #F5F7FA;
+  border-radius: 12px;
+  padding: 12px 8px;
+  text-align: center;
+}
+
+.gameStat strong {
+  display: block;
+  font-family: 'Bangers', sans-serif;
+  font-size: 22px;
+  color: var(--ab-red);
+  letter-spacing: 1px;
+}
+
+.gameStat span {
+  font-size: 11px;
+  color: var(--muted);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.subDesc {
+  font-size: 13px;
+  color: var(--muted);
+  margin: -12px 0 16px;
 }
 
 @media (max-width: 600px) {
@@ -140,5 +223,11 @@
   }
   .heroStats {
     justify-content: center;
+  }
+  .gameStatsGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .heroName {
+    font-size: 26px;
   }
 }

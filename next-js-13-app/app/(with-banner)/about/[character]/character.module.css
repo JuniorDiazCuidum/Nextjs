@@ -1,0 +1,188 @@
+.page {
+  max-width: 720px;
+  margin: 0 auto;
+  padding: 28px 20px 60px;
+}
+
+.back {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  color: var(--ab-red);
+  font-weight: 700;
+  font-size: 14px;
+  text-decoration: none;
+  margin-bottom: 20px;
+  padding: 6px 14px;
+  background: rgba(232,48,42,0.08);
+  border-radius: 20px;
+  transition: background 0.15s;
+}
+
+.back:hover {
+  background: rgba(232,48,42,0.16);
+}
+
+/* ─── TARJETA PERFIL ─── */
+.profileCard {
+  background: #fff;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.10);
+  margin-bottom: 20px;
+}
+
+.profileBanner {
+  height: 110px;
+  background: linear-gradient(135deg, var(--char-color), color-mix(in srgb, var(--char-color) 55%, white 45%));
+}
+
+.profileHeader {
+  padding: 0 24px 24px;
+}
+
+.profileAvatar {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 5px solid #fff;
+  margin-top: -50px;
+  display: block;
+  box-shadow: 0 4px 14px rgba(0,0,0,0.18);
+  background: var(--ab-sky, #87CEEB);
+}
+
+.profileName {
+  font-family: 'Bangers', cursive;
+  font-size: 34px;
+  letter-spacing: 2px;
+  color: var(--text, #1E1E1E);
+  margin: 12px 0 2px;
+}
+
+.profileRole {
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--char-color);
+  margin: 0 0 12px;
+}
+
+.profileBio {
+  font-size: 15px;
+  line-height: 1.65;
+  color: var(--text-light, #555);
+  margin: 0 0 20px;
+}
+
+.statsGrid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10px;
+  background: #F5F7FA;
+  border-radius: 12px;
+  padding: 14px 10px;
+}
+
+.statBox {
+  text-align: center;
+}
+
+.statBox strong {
+  display: block;
+  font-family: 'Bangers', cursive;
+  font-size: 20px;
+  color: var(--char-color);
+  letter-spacing: 1px;
+}
+
+.statBox span {
+  font-size: 10px;
+  color: var(--muted, #777);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+/* ─── SECCIONES ─── */
+.section {
+  background: #fff;
+  border-radius: 16px;
+  padding: 20px 24px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.07);
+  margin-bottom: 16px;
+}
+
+.sectionTitle {
+  font-family: 'Bangers', cursive;
+  font-size: 22px;
+  letter-spacing: 1.5px;
+  color: var(--ab-red, #E8302A);
+  margin: 0 0 14px;
+}
+
+.powerBadge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: color-mix(in srgb, var(--char-color) 12%, white);
+  border: 2px solid var(--char-color);
+  border-radius: 12px;
+  padding: 10px 18px;
+  font-size: 15px;
+  font-weight: 700;
+  color: color-mix(in srgb, var(--char-color) 80%, black);
+}
+
+.factsList {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.factItem {
+  display: flex;
+  gap: 10px;
+  align-items: flex-start;
+  font-size: 14px;
+  color: var(--text-light, #555);
+  line-height: 1.55;
+  padding: 8px 12px;
+  background: #F9FAFB;
+  border-radius: 10px;
+}
+
+.factItem::before {
+  content: '✦';
+  color: var(--char-color);
+  font-size: 14px;
+  flex-shrink: 0;
+  margin-top: 1px;
+}
+
+.quoteList {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.quote {
+  background: #F9FAFB;
+  border-left: 4px solid var(--char-color);
+  border-radius: 0 12px 12px 0;
+  padding: 12px 16px;
+  font-size: 15px;
+  font-style: italic;
+  color: var(--text, #1E1E1E);
+  margin: 0;
+}
+
+@media (max-width: 520px) {
+  .statsGrid { grid-template-columns: repeat(2, 1fr); }
+  .profileName { font-size: 26px; }
+  .profileBanner { height: 80px; }
+  .profileAvatar { width: 80px; height: 80px; margin-top: -40px; }
+  .section { padding: 16px; }
+}

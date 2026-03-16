@@ -4,6 +4,9 @@ const nextConfig = {
     appDir: true
   },
   reactCompiler: true,
+  turbopack: {
+    root: __dirname,
+  },
 };
 
 export default nextConfig;

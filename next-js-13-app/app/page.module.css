@@ -32,8 +32,19 @@
 @media (max-width: 680px) {
   .container {
     grid-template-columns: 1fr;
+    padding: 16px 12px;
+    gap: 16px;
   }
   .sidebar {
     position: static;
+  }
+  .feed h2 {
+    font-size: 22px;
+  }
+}
+
+@media (max-width: 400px) {
+  .container {
+    padding: 10px 8px;
   }
 }

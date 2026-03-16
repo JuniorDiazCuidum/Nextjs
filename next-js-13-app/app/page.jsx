@@ -105,7 +105,7 @@ export default function HomePage() {
   return (
     <main className={styles.container}>
       <section className={styles.feed}>
-        <h2>Inicio</h2>
+        <h2>Home</h2>
         <div>
           {posts.map((post) => (
             <Post key={post.id} post={post} />

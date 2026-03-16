@@ -56,21 +56,20 @@ const EMOJIS = ['😡', '💥', '💙', '😂', '🥚']
 
 function CommentItem({ id, avatar, name, body }) {
   const [reactions, setReactions] = useState({})
-  const [picked, setPicked] = useState(null)
+  const [active, setActive] = useState(new Set())
 
   function react(emoji) {
-    setReactions(prev => {
-      const next = { ...prev }
-      if (picked === emoji) {
-        next[emoji] = Math.max(0, (next[emoji] ?? 0) - 1)
-        setPicked(null)
-      } else {
-        if (picked) next[picked] = Math.max(0, (next[picked] ?? 0) - 1)
-        next[emoji] = (next[emoji] ?? 0) + 1
-        setPicked(emoji)
-      }
+    const isActive = active.has(emoji)
+    setActive(prev => {
+      const next = new Set(prev)
+      if (isActive) next.delete(emoji)
+      else next.add(emoji)
       return next
     })
+    setReactions(prev => ({
+      ...prev,
+      [emoji]: Math.max(0, (prev[emoji] ?? 0) + (isActive ? -1 : 1))
+    }))
   }
 
   return (
@@ -83,7 +82,7 @@ function CommentItem({ id, avatar, name, body }) {
           {EMOJIS.map(emoji => (
             <button
               key={emoji}
-              className={`${styles.emojiBtn} ${picked === emoji ? styles.emojiActive : ''}`}
+              className={`${styles.emojiBtn} ${active.has(emoji) ? styles.emojiActive : ''}`}
               onClick={() => react(emoji)}
             >
               {emoji}
